@@ -1,0 +1,174 @@
+<html>
+
+<head>
+	<script language="JavaScript">
+		function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+         function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         }
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         } 
+         function sin ()
+         {
+          let a = document.getElementById("result").value
+          let b = eval(a)
+          document.getElementById("result").value=Math.sin(b)
+         }
+         function cos ()
+         {
+          let a = document.getElementById("result").value
+          let b = eval(a)
+          document.getElementById("result").value=Math.cos(b)
+         }
+          function tan ()
+         {
+          let a = document.getElementById("result").value
+          let b = eval(a)
+          document.getElementById("result").value=Math.tan(b)
+         }
+         
+         function sr ()
+         {
+          let a = document.getElementById("result").value
+          let b = eval(a)
+          document.getElementById("result").value=Math.sqrt(b)
+         }
+        function pi()
+        {
+          document.getElementById("result").value=3.141592654
+        }
+  memory = 0;
+
+        
+        function removememory()
+        {
+        memory = 0
+        }
+        
+        function displaymemory()
+        {
+        document.getElementById("result").value = memory;
+        }
+
+        function memorysave()
+        {
+        memory = document.getElementById("result").value
+        }
+        function memoryadd()
+        {
+         let a = document.getElementById("result").value
+         let b = eval(a)
+         memory = parseInt(memory) + parseInt(b)
+        }
+	</script>
+	<style>
+		.title {
+			margin-bottom: 10px;
+			text-align: center;
+			width: 275px;
+			color: black;
+			border: solid black 2px;
+			background-color: grey;
+      font-size: 23px;
+      font-family: comic sans MS;
+      font-style: italic;
+      }
+
+		input[type="button"] {
+			background-color: orange;
+			color: black;
+			border: solid black 2px;
+			width: 100%;
+      border-radius: 25px;
+      font-size: 25px;
+      font-family: comic sans MS;
+      font-style: oblique;
+      box-shadow: 0 9px #999;
+      cursor: pointer;
+      }
+   input[type="button"]:hover {background-color:skyblue}
+
+   input[type="button"]:focus {
+  background-color: skyblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+		input[type="text"] {
+			background-color: white;
+			border: solid black 2px;
+			width: 100%;
+      font-size: 15px;
+      font-family: comic sans MS;
+      font-style: oblique;
+		}
+    
+    body  {
+     background-image: url("http://www.lol-wallpapers.com/wp-content/uploads/2017/11/PROJECT-Hunters-6-Cinematic-HD-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg");
+     background-position: center; 
+     margin: auto;
+     width: 20%;
+     padding: 110px;
+    }
+	</style>
+</head>
+
+<body>
+	<div class=title>The most calculating of all calculators...beep boop</div>
+	<table border="1">
+		<tr>
+			<td colspan="3"><input type="text" id="result" /></td> 
+            <td><input type="button" value="c" onclick="clr()"/> </td>
+            <td><input type="button" value="Cos" onclick="cos()"/></td>
+            <td><input type="button" value="Tan" onclick="tan()"/> </td>   
+            <td><input type="button" value="Pi" onclick="pi()"/> </td>  
+            
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+            <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+            <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+            <td><input type="button" value="/" onclick="dis('/')"/> </td>
+            <td><input type="button" value="Sin" onclick="sin()"/> </td>
+            <td><input type="button" value="M+" onclick="memoryadd()"/> </td>
+            
+             
+           
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="dis('4')"/> </td> 
+            <td><input type="button" value="5" onclick="dis('5')"/> </td> 
+            <td><input type="button" value="6" onclick="dis('6')"/> </td> 
+            <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+            <td><input type="button" value="sr" onclick="sr()"/> </td>
+            <td><input type="button" value="MC" onclick="removememory()"/> </td>
+           
+         </tr> 
+         <tr> 
+            <td><input type="button" value="1" onclick="dis('1')"/> </td> 
+            <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+            <td><input type="button" value="3" onclick="dis('3')"/> </td> 
+            <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+            <td><input type="button" value="(" onclick="dis('(')"/> </td> 
+            <td><input type="button" value="MR" onclick="displaymemory()"/> </td>
+           
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="dis('.')"/> </td> 
+            <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" value="X" onclick="dis('*')"/> </td> 
+            <td><input type="button" value=")" onclick="dis(')')"/> </td> 
+            <td><input type="button" value="MS" onclick="memorysave()"/> </td>
+         </tr> 
+      </table> 
+
+</html>
